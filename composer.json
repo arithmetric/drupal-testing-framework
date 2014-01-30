@@ -1,0 +1,7 @@
+{
+    "name": "drupal/drupal-testing-framework",
+    "description": "Testing framework for a Drupal site.",
+    "config": {
+        "bin-dir": "bin"
+    }
+}
