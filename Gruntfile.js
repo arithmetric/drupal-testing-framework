@@ -43,13 +43,15 @@ module.exports = function(grunt) {
    * Define "watch" tasks.
    *
    * Add a watch task that automatically runs the test suite when a file in
-   * the Drupal docroot changes (except for files in sites/.../files).
+   * the Drupal docroot changes (except for files in sites/.../files) or when
+   * a file in the testing features directory changes.
    */
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.config('watch', {
     files: [
       '<%= config.docroot %>/**/*',
-      '!<%= config.docroot %>/sites/*/files/**/*'
+      '!<%= config.docroot %>/sites/*/files/**/*',
+      'features/**/*'
     ],
     tasks: ['behat']
   });
